@@ -2,4 +2,15 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true  # Initialize submodules
+
+      - name: Initialize submodules
+        run: git submodule update --init --recursive
+
+      - name: Build firmware
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
