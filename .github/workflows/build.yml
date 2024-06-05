@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: true  # Initialize submodules
 
@@ -13,7 +13,7 @@ jobs:
         run: git submodule update --init --recursive
 
       - name: Upload repository
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: repo
           path: .
@@ -23,9 +23,9 @@ jobs:
     needs: prepare
     steps:
       - name: Download repository
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: repo
 
       - name: Build firmware
-        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@mai
