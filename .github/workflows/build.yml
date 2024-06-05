@@ -19,12 +19,13 @@ jobs:
           path: .
 
   build:
+    runs-on: ubuntu-latest
     needs: prepare
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      repo: repo
     steps:
       - name: Download repository
         uses: actions/download-artifact@v2
         with:
           name: repo
+
+      - name: Build firmware
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
