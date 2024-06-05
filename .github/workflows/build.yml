@@ -1,7 +1,7 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build:
+  prepare:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -12,5 +12,19 @@ jobs:
       - name: Initialize submodules
         run: git submodule update --init --recursive
 
-      - name: Build firmware
-        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+      - name: Upload repository
+        uses: actions/upload-artifact@v2
+        with:
+          name: repo
+          path: .
+
+  build:
+    needs: prepare
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      repo: repo
+    steps:
+      - name: Download repository
+        uses: actions/download-artifact@v2
+        with:
+          name: repo
