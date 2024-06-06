@@ -140,12 +140,21 @@
             >;
         };
 
-        layer_3 {
+        symbols {
             bindings = <
-&trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &trans        &trans           &trans          &trans            &trans      &trans
+&to 4   &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &trans        &trans           &trans          &trans            &trans      &trans
 &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans
 &trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans    &trans        &trans           &trans          &trans            &trans      &trans
                         &trans                &trans                 &trans    &trans        &trans           &trans
+            >;
+        };
+
+        colemak-dh {
+            bindings = <
+&kp TAB         &kp Q  &kp W  &kp F   &kp P  &kp B        &kp J      &kp L  &kp U      &kp Y    &kp SEMI  &kp BACKSPACE
+&kp ESCAPE      &kp A  &kp R  &kp S   &kp T  &kp G        &kp M      &kp N  &kp E      &kp I    &kp O     &kp SINGLE_QUOTE
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C   &kp D  &kp V        &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                              &trans  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &to 0
             >;
         };
     };
