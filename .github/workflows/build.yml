@@ -27,3 +27,7 @@ jobs:
         run: |
           west build -s app -b nice_nano -- -DZMK_CONFIG="$(pwd)/config"
           west build -t flash
+
+      - name: Output build logs
+        run: |
+          cat $(west build -t flash -b nice_nano 2>&1) || true
