@@ -103,10 +103,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB            &kp Q                &kp W            &kp E            &kp R              &kp T        &kp Y    &kp U               &kp I                 &kp O             &kp P                    &kp BSPC
-&hml LCTRL ESCAPE  &hml LEFT_COMMAND A  &hml LEFT_ALT S  &hml LCTRL D     &hml LEFT_SHIFT F  &kp G        &kp H    &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_COMMAND SEMI  &kp SQT
-&kp K_PLAY_PAUSE   &kp Z                &kp X            &kp C            &kp V              &kp B        &kp N    &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp ESC
-                                                         &kp K_VOLUME_UP  &mo 1              &kp SPACE    &kp RET  &mo 2               &kp K_VOLUME_DOWN
+&kp TAB            &kp Q                &kp W            &kp E         &kp R              &kp T        &kp Y    &kp U               &kp I                 &kp O             &kp P                    &kp BSPC
+&hml LCTRL ESCAPE  &hml LEFT_COMMAND A  &hml LEFT_ALT S  &hml LCTRL D  &hml LEFT_SHIFT F  &kp G        &kp H    &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_COMMAND SEMI  &kp SQT
+&kp K_PLAY_PAUSE   &kp Z                &kp X            &kp C         &kp V              &kp B        &kp N    &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp ESC
+                                                         &mo 5         &mo 1              &kp SPACE    &kp RET  &mo 2               &mo 5
             >;
         };
 
@@ -155,6 +155,15 @@
 &kp ESCAPE      &kp A  &kp R  &kp S   &kp T  &kp G        &kp M      &kp N  &kp E      &kp I    &kp O     &kp SINGLE_QUOTE
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C   &kp D  &kp V        &kp K      &kp H  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                               &trans  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &to 0
+            >;
+        };
+
+        function {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
